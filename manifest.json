@@ -1,0 +1,11 @@
+{
+    "name": "Trivia Question of the Day",
+    "version": "1.0.0",
+    "description": "Test your random knowledge daily!",
+    "manifest_version": 3,
+    "author": "Kiran and Jonathan",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Trivia Question of the Day"
+    }
+}

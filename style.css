@@ -1,0 +1,63 @@
+body{
+    font-family:'Courier New', Courier, monospace;
+    width: 400px;
+    height:240px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    gap:8px;
+    background: rgb(246,230,245);
+    background: linear-gradient(180deg, rgba(246,230,245,1) 0%, rgba(236,250,252,1) 100%);  
+}
+
+body > h3, body > h1, body > p {
+    margin: 4px;
+}
+
+#btn-div {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width: 50%;
+}
+#answer-btn{
+    background-color:rgb(44, 113, 44);
+    border:none;
+    color:white;
+    padding: 8px 16px;
+    text-align:center;
+    text-decoration:none;
+    font-size:14px;
+    border-radius:16px;
+    box-shadow: 3px 2px 2px gray;
+}
+
+#answer-btn:hover{
+    background-color:rgb(101, 175, 101);
+}
+
+#answer-btn:active{
+    background-color:rgb(49, 145, 49);
+}
+
+#next-question-btn{
+    background-color:rgb(35, 35, 90);
+    border:none;
+    color:white;
+    padding: 8px 16px;
+    text-align:center;
+    text-decoration:none;
+    font-size:14px;
+    border-radius:16px;
+    box-shadow: 3px 2px 2px gray;
+}
+
+#next-question-btn:hover{
+    background-color:lightblue;
+}
+
+#next-question-btn:active{
+    background-color:rgb(109, 192, 220);
+}
