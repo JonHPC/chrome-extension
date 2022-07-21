@@ -4,12 +4,14 @@
     "description": "Test your random knowledge daily!",
     "manifest_version": 3,
     "author": "Kiran and Jonathan",
-    "browser_action":{
-        "default_icon": "question-icon.png"
-    },
     "action":{
         "default_popup": "index.html",
         "default_title": "Trivia Question of the Day",
         "default_icon": "question-icon.png"
+    },
+    "icons":{
+        "16":"question-icon16.png",
+        "48":"question-icon48.png",
+        "128":"question-icon128.png"
     }
 }
