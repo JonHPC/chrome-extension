@@ -60,8 +60,14 @@ body > p{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  width: 50%;
+  width: 63%;
 }
+
+#LabelAll, #LabelEasy, #LabelMedium, #LabelHard{
+    flex-grow:2;
+    text-align:right;
+}
+
 
 #answer-btn{
     background-color:rgb(226,121,90);

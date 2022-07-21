@@ -9,8 +9,8 @@ const body = document.body;
 const triviaText = document.createElement('h3');
 const answerText = document.createElement('h3');
 const categoryText = document.createElement('p');
-const difficultyText = document.createElement('p');
-const typeText = document.createElement('p');
+//const difficultyText = document.createElement('p');
+//const typeText = document.createElement('p');
 const answerBtn = document.createElement('button');
 const nextQuestionBtn = document.createElement('button');
 
@@ -18,12 +18,13 @@ const nextQuestionBtn = document.createElement('button');
 const difficultyBtns = document.createElement('div')//to append all of the radio elements
 difficultyBtns.id = 'btn-div'
 
-const difficultyArr = ['All','1','2','3']
+const difficultyArr = ['All','Easy','Medium','Hard']
 difficultyArr.forEach(level =>{
   const difficultyBtn = document.createElement('input')
   const label = document.createElement('label')
   label.for = `${level}Radio`
   label.innerHTML = level
+  label.id = `Label${level}`
   difficultyBtn.type = 'radio'
   difficultyBtn.name = 'difficultyRadio'
   difficultyBtn.id = `${level}Radio`
@@ -74,16 +75,16 @@ function updateDifficulty(){
 // get value of selected radio button
 const diffRadio = document.getElementsByName('difficultyRadio')
 //console.log(diffOpt[0].checked)
-const selectedDiff = diffRadio[1].checked ? '1'
-                  :  diffRadio[2].checked ? '2'
-                  :  diffRadio[3].checked ? '3'
+const selectedDiff = diffRadio[1].checked ? 'Easy'
+                  :  diffRadio[2].checked ? 'Medium'
+                  :  diffRadio[3].checked ? 'Hard'
                   : 'All'
 
   const urls = {
       "All" :'https://opentdb.com/api.php?amount=1&type=boolean',
-      "1": 'https://opentdb.com/api.php?amount=1&difficulty=easy&type=boolean',
-      "2": 'https://opentdb.com/api.php?amount=1&difficulty=medium&type=boolean',
-      "3": 'https://opentdb.com/api.php?amount=1&difficulty=hard&type=boolean'
+      "Easy": 'https://opentdb.com/api.php?amount=1&difficulty=easy&type=boolean',
+      "Medium": 'https://opentdb.com/api.php?amount=1&difficulty=medium&type=boolean',
+      "Hard": 'https://opentdb.com/api.php?amount=1&difficulty=hard&type=boolean'
   }
 
   let url = urls[selectedDiff]//'https://opentdb.com/api.php?amount=1&difficulty=easy&type=boolean'
