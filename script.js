@@ -9,7 +9,7 @@ const body = document.body;
 const triviaText = document.createElement('h3');
 const answerText = document.createElement('h3');
 const categoryText = document.createElement('p');
-//const difficultyText = document.createElement('p');
+const difficultyText = document.createElement('p');
 //const typeText = document.createElement('p');
 const answerBtn = document.createElement('button');
 const nextQuestionBtn = document.createElement('button');
@@ -45,7 +45,7 @@ nextQuestionBtn.addEventListener('click', loadNextQuestion)
 triviaText.innerHTML = "Question loading..."
 answerText.innerHTML = "???"
 categoryText.innerHTML = "Category: "
-//difficultyText.innerHTML = "Difficulty: "
+difficultyText.innerHTML = "Difficulty: "
 //typeText.innerHTML = "Question Type: "
 answerBtn.innerHTML = "Reveal Answer"
 answerBtn.id = "answer-btn"
@@ -63,7 +63,7 @@ nextQuestionBtn.style.display = 'none'
 body.appendChild(triviaText);
 body.appendChild(answerText);
 body.appendChild(categoryText);
-//body.appendChild(difficultyText);
+body.appendChild(difficultyText);
 //body.appendChild(typeText);
 body.appendChild(difficultyBtns)
 body.appendChild(answerBtn);
@@ -108,7 +108,7 @@ fetch(url)
     categoryText.innerHTML = `Category: ${data.results[0].category}`
     answerText.innerHTML = `Answer: ${data.results[0].correct_answer}`
     //typeText.innerHTML = `Question Type: ${data.results[0].type}`
-    //difficultyText.innerHTML = `Difficulty: ${data.results[0].difficulty}`
+    difficultyText.innerHTML = `Difficulty: ${data.results[0].difficulty}`
     //console.log(data.results[0].category)
   }
 
