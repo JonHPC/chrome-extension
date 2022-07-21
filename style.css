@@ -1,19 +1,37 @@
 body{
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Nunito Sans', sans-serif;
     width: 400px;
-    height:240px;
+    height:250px;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
     align-items:center;
-    padding:18px;
+    padding:20px;
     gap:8px;
-    background: rgb(246,230,245);
-    background: linear-gradient(180deg, rgba(246,230,245,1) 0%, rgba(236,250,252,1) 100%);  
+    color:white;
+    background-color:rgb(46, 46, 46);
+    border:2px solid white;
+    border-radius:16px;
 }
 
 body > h3, body > h1, body > p {
     margin: 4px;
+}
+
+body > p{
+    font-style:italic;
+}
+
+#icon{
+    position:absolute;
+    top:20px;
+    right:30px;
+}
+
+#question-man{
+    position:absolute;
+    bottom:20px;
+    left:10px;
 }
 
 #btn-div {
@@ -22,42 +40,47 @@ body > h3, body > h1, body > p {
   align-items:center;
   width: 50%;
 }
+
 #answer-btn{
-    background-color:rgb(44, 113, 44);
+    background-color:rgb(226,121,90);
     border:none;
     color:white;
+    font-family: 'Nunito Sans', sans-serif;
     padding: 8px 16px;
     text-align:center;
     text-decoration:none;
     font-size:14px;
-    border-radius:16px;
-    box-shadow: 3px 2px 2px gray;
+    border-radius:12px;
+    transition:0.1s;
 }
 
 #answer-btn:hover{
-    background-color:rgb(101, 175, 101);
+    background-color:rgb(243, 131, 97);
+    transform: scale(1.05);
 }
 
 #answer-btn:active{
-    background-color:rgb(49, 145, 49);
+    transform: scale(0.95);
 }
 
 #next-question-btn{
-    background-color:rgb(35, 35, 90);
+    background-color:rgb(122, 179, 198);
     border:none;
     color:white;
+    font-family: 'Nunito Sans', sans-serif;
     padding: 8px 16px;
     text-align:center;
     text-decoration:none;
     font-size:14px;
-    border-radius:16px;
-    box-shadow: 3px 2px 2px gray;
+    border-radius:12px;
+    transition: 0.1s;
 }
 
 #next-question-btn:hover{
-    background-color:lightblue;
+    background-color:rgb(147,208,228);
+    transform: scale(1.05);
 }
 
 #next-question-btn:active{
-    background-color:rgb(109, 192, 220);
+    transform: scale(0.95);
 }

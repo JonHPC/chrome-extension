@@ -36,7 +36,6 @@ difficultyArr.forEach(level =>{
   difficultyBtns.appendChild(difficultyBtn)
 })
 
-
 //add event listener to the answer button and next question button
 answerBtn.addEventListener('click', revealAnswer)
 nextQuestionBtn.addEventListener('click', loadNextQuestion)
@@ -72,7 +71,7 @@ body.appendChild(nextQuestionBtn);
 function updateDifficulty(){
 // fetch data from trivia api, get request
 // all 4 urls for all, easy, med, hard
-// get value of selected raadio button
+// get value of selected radio button
 const diffRadio = document.getElementsByName('difficultyRadio')
 //console.log(diffOpt[0].checked)
 const selectedDiff = diffRadio[1].checked ? '1'
@@ -90,8 +89,7 @@ const selectedDiff = diffRadio[1].checked ? '1'
   let url = urls[selectedDiff]//'https://opentdb.com/api.php?amount=1&difficulty=easy&type=boolean'
   return url
 }
-// fetch(url)
-// .then(res => console.log(JSON.parse(res)))
+
 
 let url = updateDifficulty()
 fetch(url)
@@ -127,7 +125,7 @@ fetch(url)
     answerBtn.style.display = 'block'
     nextQuestionBtn.style.display = 'none'
 
-let url = updateDifficulty()
+    let url = updateDifficulty()
     //call the api again
     fetch(url)
     .then((data) => {
