@@ -1,7 +1,7 @@
 {
     "name": "Trivia Question of the Day",
     "version": "1.0.0",
-    "description": "Test your random knowledge daily!",
+    "description": "Test your random knowledge daily! Created by Kiran and Jonathan! Go LA 52!",
     "manifest_version": 3,
     "author": "Kiran and Jonathan",
     "action":{
